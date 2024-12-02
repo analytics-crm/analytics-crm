@@ -746,6 +746,7 @@ section,
 .about p {
   line-height: 1.7;
   color: var(--default-color);
+  margin: 10px;
 }
 
 .about .swiper-pagination {
@@ -771,6 +772,14 @@ section,
   color: var(--default-color);
 }
 
+p.intro{
+  line-height: 1.7;
+  color: var(--default-color);
+  display: flex;
+  margin-left: 2em;
+  padding: 3em;
+  text-align: center;
+}
 /*--------------------------------------------------------------
 # About 2 Section
 --------------------------------------------------------------*/
@@ -824,6 +833,15 @@ th, td {
   font-size: 18px;
   font-weight: normal;
   color: var(--default-color);
+}
+
+.intro{
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--default-color);
+  margin: 15px;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
