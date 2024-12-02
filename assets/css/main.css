@@ -220,7 +220,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: rgb(2,3,129);/*var(--nav-hover-color);*/
   }
 
   .navmenu .dropdown ul {
@@ -583,7 +583,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-color: rgb(2,3,129) transparent;/*var(--accent-color) transparent var(--accent-color) transparent;*/
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -780,6 +780,11 @@ section,
   padding-bottom: 50px;
 }
 
+th, td {
+  padding: 10px;
+  border-radius: 1px;
+}
+
 .about-2 .content-subtitle {
   font-size: 15px;
   margin-bottom: 10px;
@@ -863,6 +868,15 @@ section,
   font-size: 18px;
   font-weight: normal;
   color: var(--default-color);
+  justify-content: center;
+}
+
+.lead-table{
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--default-color);
+  margin-bottom: 5%;
 }
 
 .stats .content-title {
