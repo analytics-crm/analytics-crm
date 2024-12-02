@@ -50,26 +50,35 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <!--<li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="blog.html">Blog</a></li>-->
+          <li class="dropdown"><a href="#"><span>Grafici</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <!--<li><a href="#">Dropdown 1</a></li>-->
+              <li class="dropdown"><a href="#"><span>Count</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#plotly-div-1">Numero Conti Fase</a></li>
-                  <li><a href="#plotly-div-2">Importo Medio Fase</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li><a href="#plotly-div-4">Dimensione Aziendale</a></li>
                 </ul>
               </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li class="dropdown"><a href="#"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#plotly-div-2">Media Importo Fase</a></li>
+                  <li><a href="#plotly-div-3">Media Importo Settore</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Temporale</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#plotly-div-6">Closed Won: 2024</a></li>
+                  <li><a href="#plotly-div-7">Closed Lost: 2024</a></li>
+                </ul>
+              </li>
+              <li><a href="#plotly-div-8">Aziende - Settore</a></li>
+              <!--<li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>-->
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -84,15 +93,21 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
-      <p class="intro">
-        Il caso di studio presentato si concentra sull'analisi di due dataset: ACCOUNTS e DEALS, contenenti informazioni su aziende e transazioni commerciali rispettivamente. L'obiettivo principale è identificare e affrontare criticità nei dati per fornire insight utili al business, come la classificazione delle aziende in base alle loro dimensioni e l'analisi delle opportunità di vendita.
+      <div class="intro">
+      <p>DISCLAIMER: Questo caso di studio contiene informazioni private e riservate. Dopo essere stato presentato, lo stesso verrà interrotto.
       </p>
+      <p>Il caso di studio presentato si concentra sull'analisi di due dataset: <b>ACCOUNTS</b> e <b>DEALS</b>, contenenti informazioni su aziende e transazioni commerciali rispettivamente. L'obiettivo principale è identificare e affrontare criticità nei dati per fornire insight utili al business, come la classificazione delle aziende in base alle loro dimensioni e l'analisi delle opportunità di vendita.
+      </p>
+      </div>
       <div class="container">
         <h2>Numero Conti per Fase</h2>
         <div id="plotly-div-1">
           <iframe src="./num_conti_fase.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Attualmente il portafoglio dei clienti è composto da un totale di 1048 accordi con base nei file utilizzati per l'analisi.</p>
+          <p>Attualmente il portafoglio dei clienti è composto da un totale di 1048 accordi con base nei file utilizzati per l'analisi. Nel processo di pulizia sono state tolti 
+            6 risultati che erano classificati come "Closed Won" però presentavano un importo di €0.
+          </p>
+          <p>Gli accordi con la classifica "Closed Won" costituiscono la maggior parte nel portafoglio, ma ancora meno della metà. Subito dopo ci sono i casi persi, componendo 33% del portafoglio presente nei file utilizzati per l'analisi.</p>
       </div>
       <p class="lead-table">
         <table  data-aos="fade-up" data-aos-delay="300">
@@ -113,7 +128,7 @@
               <td>9.16%</td>
           </tr>
           <tr>
-              <td>Neoziazione/Revisione</td>
+              <td>Negoziazione/Revisione</td>
               <td>1.34%</td>
           </tr>
           <tr>
@@ -134,6 +149,8 @@
         <div id="plotly-div-2">
           <iframe src="./media_fase.html" height="600" width="1200" frameborder="0">
           </iframe>
+          <p>In questo secondo grafico è possibile controllare la media di importo per ogni fase di tratativa. "Demo" presenta la media più alta e "Closed Lost" è quello con la media più alta.
+          </p>
       </div>
     </section>
     <section id="about" class="about section">
@@ -141,6 +158,9 @@
         <div id="plotly-div-3">
           <iframe src="./media_importo_settore.html" height="600" width="1200" frameborder="0">
           </iframe>
+          <p>Nel grafico "Importo Medio per Settore" sono in evidenza le aziende più presente nel portafoglio. Attività Manufatturiere è al primo posto e subito dopo abbiamo la grande presenza
+            dei dati sconosciuti, che evidenzia il impatto dei dati inconsistenti in questa analisi.
+          </p>
       </div>
     </section>
     <section id="about" class="about section">
@@ -148,6 +168,10 @@
         <div id="plotly-div-4">
           <iframe src="./dimensione_aziendale.html" height="600" width="1200" frameborder="0">
           </iframe>
+          <p>La classificazione di dimensione aziendale segue il regolamento europeo presente nella tabella sotto.
+          </p>
+          <p>La maggior parte dei clienti che compongono il portafoglio sono classificati come piccole aziende e subito dopo ci sono le grande aziende.
+          </p>
       </div>
     </section>
     <section id="about" class="about section">
@@ -155,6 +179,8 @@
         <div id="plotly-div-5">
           <iframe src="./distribuzione_percentuale_settore.html" height="600" width="1200" frameborder="0">
           </iframe>
+          <p>Questo grafico mostra solo i primi 5 settori più frequenti nel portafoglio e quanto rappresentano in percentuale. Ancora una volta, dati sconosciuti sono presenti nel dataset subito dopo l'attività manifatturiera che rappresenta il 18 percento del portafoglio. Altri quattro settori importanti sono COMMERCIO ALL'INGROSSO E AL DETTAGLIO; RIPARAZIONE DI AUTOVEICOLI E MOTOCICLI, SERVIZI DI INFORMAZIONE E COMUNICAZIONE, ATTIVITÀ PROFESSIONALI, SCIENTIFICHE E TECNICHE E NOLEGGIO, AGENZIE DI VIAGGIO, SERVIZI DI SUPPORTO ALLE IMPRESE
+          </p>
       </div>
     </section>
     <section id="about" class="about section">
@@ -162,6 +188,9 @@
         <div id="plotly-div-6">
           <iframe src="./closed_won_importo.html" height="600" width="1200" frameborder="0">
           </iframe>
+          <p>Per ragioni di dati inconsistenti, nella analisi temporale è stata utilizata solo la "Data Chiusura" in cui si intendi le date che gli accordi sono state chiusi o devono chiudere. 
+            Il grafico presenta la somma 
+          </p>
       </div>
     </section>
     <section id="about" class="about section">
@@ -172,8 +201,10 @@
       </div>
     </section>
     <section id="about" class="about section">
-    <div class='tableauPlaceholder' id='viz1733141397532' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Test1_17331413827900&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Test1_17331413827900&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Test1_17331413827900&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733141397532');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-  </section>  
+    <h2>Numero di Aziende nel Settore per Fase</h2>
+    <div id="plotly-div-8">
+    <div class='tableauPlaceholder' id='viz1733150602861' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_settore_fase&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='count_settore_fase&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_settore_fase&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733150602861');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  </section></div>
     <!--<div class="row align-items-center justify-content-between">
           <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper init-swiper">
@@ -321,7 +352,7 @@
       </div>
     </section>--><!-- /Services Section -->
 
-    <!-- Stats Section -->
+    <!-- Stats Section 
     <section id="stats" class="stats section light-background">
 
       <div class="container">
@@ -347,26 +378,26 @@
             </p>
             <div class="row mb-5 count-numbers">
 
-              <!-- Start Stats Item -->
+              <!-- Start Stats Item 
               <div class="col-4 counter" data-aos="fade-up" data-aos-delay="100">
                 <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="3919" data-purecounter-duration="1" class="purecounter number"></span>
                 <span class="d-block">Coffee</span>
               </div>
               <!-- End Stats Item -->
 
-              <!-- Start Stats Item -->
+              <!-- Start Stats Item 
               <div class="col-4 counter" data-aos="fade-up" data-aos-delay="200">
                 <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="2831" data-purecounter-duration="1" class="purecounter number"></span>
                 <span class="d-block">Codes</span>
               </div>
-              <!-- End Stats Item -->
+              <!-- End Stats Item 
 
-              <!-- Start Stats Item -->
+              <!-- Start Stats Item 
               <div class="col-4 counter" data-aos="fade-up" data-aos-delay="300">
                 <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="1914" data-purecounter-duration="1" class="purecounter number"></span>
                 <span class="d-block">Projects</span>
               </div>
-              <!-- End Stats Item -->
+              <!-- End Stats Item 
 
             </div>
           </div>
@@ -376,13 +407,13 @@
       </div>
     </section><!-- /Stats Section -->
 
-    <!-- Blog Posts Section -->
+    <!-- Blog Posts Section 
     <section id="blog-posts" class="blog-posts section">
-      <!-- Section Title -->
+      <!-- Section Title 
       <div class="container section-title" data-aos="fade-up">
         <p>Recent Posts</p>
         <h2>Blog Posts</h2>
-      </div><!-- End Section Title -->
+      </div><!-- End Section Title 
       <div class="container">
 
         <div class="row gy-4">
@@ -471,9 +502,9 @@
           </div>
         </div>
       </div>
-    </section><!-- /Blog Posts Section -->
+    </section><!-- /Blog Posts Section
 
-    <!-- Tabs Section -->
+    <!-- Tabs Section 
     <section id="tabs" class="tabs section light-background">
 
       <div class="container">
@@ -483,61 +514,61 @@
               <div class="service-icon color-1 mb-4">
                 <i class="bi bi-alarm"></i>
               </div>
-              <!-- /.icon -->
+              <!-- /.icon 
               <div class="service-contents">
                 <h3>Modern and clean design</h3>
                 <p>
                   Far far away, behind the word mountains, far from the countries .
                 </p>
               </div>
-              <!-- /.service-contents-->
+              <!-- /.service-contents
             </a>
-            <!-- /.service -->
+            <!-- /.service 
 
             <a href="#" class="service-item link horizontal d-flex" data-aos="fade-left" data-aos-delay="100">
               <div class="service-icon color-2 mb-4">
                 <i class="bi bi-bag-check"></i>
               </div>
-              <!-- /.icon -->
+              <!-- /.icon 
               <div class="service-contents">
                 <h3>Sell Products</h3>
                 <p>
                   Far far away, behind the word mountains, far from the countries .
                 </p>
               </div>
-              <!-- /.service-contents-->
+              <!-- /.service-contents
             </a>
-            <!-- /.service -->
+            <!-- /.service 
 
             <a href="#" class="service-item link horizontal d-flex" data-aos="fade-left" data-aos-delay="200">
               <div class="service-icon color-3 mb-4">
                 <i class="bi bi-briefcase"></i>
               </div>
-              <!-- /.icon -->
+              <!-- /.icon 
               <div class="service-contents">
                 <h3>Success Every Day</h3>
                 <p>
                   Far far away, behind the word mountains, far from the countries .
                 </p>
               </div>
-              <!-- /.service-contents-->
+              <!-- /.service-contents
             </a>
-            <!-- /.service -->
+            <!-- /.service 
 
             <a href="#" class="service-item link horizontal d-flex" data-aos="fade-left" data-aos-delay="300">
               <div class="service-icon color-4 mb-4">
                 <i class="bi bi-easel"></i>
               </div>
-              <!-- /.icon -->
+              <!-- /.icon 
               <div class="service-contents">
                 <h3>Bring Ideas to Life</h3>
                 <p>
                   Far far away, behind the word mountains, far from the countries .
                 </p>
               </div>
-              <!-- /.service-contents-->
+              <!-- /.service-contents
             </a>
-            <!-- /.service -->
+            <!-- /.service 
           </div>
 
           <div class="col-lg-8">
@@ -612,9 +643,9 @@
           </div>
         </div>
       </div>
-    </section><!-- /Tabs Section -->
+    </section><!-- /Tabs Section 
 
-    <!-- Services 2 Section -->
+    <!-- Services 2 Section 
     <section id="services-2" class="services-2 section">
 
       <div class="container">
@@ -688,16 +719,16 @@
           </div>
         </div>
       </div>
-    </section><!-- /Services 2 Section -->
+    </section><!-- /Services 2 Section 
 
-    <!-- Pricing Section -->
+    <!-- Pricing Section 
     <section id="pricing" class="pricing section light-background">
 
-      <!-- Section Title -->
+      <!-- Section Title 
       <div class="container section-title" data-aos="fade-up">
         <p>Plans</p>
         <h2>Pricing Table</h2>
-      </div><!-- End Section Title -->
+      </div><!-- End Section Title 
 
       <div class="container">
 
@@ -718,7 +749,7 @@
                 <a href="#" class="btn-buy">Buy Now</a>
               </div>
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Pricing Item 
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item recommended">
@@ -736,7 +767,7 @@
                 <a href="#" class="btn-buy">Buy Now</a>
               </div>
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Pricing Item 
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="pricing-item">
@@ -753,21 +784,21 @@
                 <a href="#" class="btn-buy">Buy Now</a>
               </div>
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Pricing Item 
 
         </div>
 
       </div>
 
-    </section><!-- /Pricing Section -->
+    </section><!-- /Pricing Section 
 
-    <!-- Faq Section -->
+    <!-- Faq Section 
     <section id="faq" class="faq section">
-      <!-- Section Title -->
+      <!-- Section Title 
       <div class="container section-title" data-aos="fade-up">
         <p>Plans</p>
         <h2>Frequently Asked Questions</h2>
-      </div><!-- End Section Title -->
+      </div><!-- End Section Title 
 
       <div class="container" data-aos="fade-up">
         <div class="row">
@@ -789,7 +820,7 @@
                   </div>
                 </div>
               </div>
-              <!-- .accordion-item -->
+              <!-- .accordion-item 
 
               <div class="accordion-item">
                 <h2 class="mb-0">
@@ -805,7 +836,7 @@
                     </div>
               </div>
             </div>
-            <!-- .accordion-item -->
+            <!-- .accordion-item 
 
             <div class="accordion-item">
               <h2 class="mb-0">
@@ -824,21 +855,21 @@
                 </div>
               </div>
             </div>
-            <!-- .accordion-item -->
+            <!-- .accordion-item 
 
           </div>
         </div>
       </div>
       </div>
-    </section><!-- /Faq Section -->
+    </section><!-- /Faq Section 
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section 
     <section id="testimonials" class="testimonials section">
-      <!-- Section Title -->
+      <!-- Section Title 
       <div class="container section-title" data-aos="fade-up">
         <p>Happy Customers</p>
         <h2>Testimonials</h2>
-      </div><!-- End Section Title -->
+      </div><!-- End Section Title 
 
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">

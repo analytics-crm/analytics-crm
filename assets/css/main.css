@@ -772,12 +772,12 @@ section,
   color: var(--default-color);
 }
 
-p.intro{
+div.intro{
   line-height: 1.7;
   color: var(--default-color);
   display: flex;
   margin-left: 2em;
-  padding: 3em;
+  padding: 1em;
   text-align: center;
 }
 /*--------------------------------------------------------------
