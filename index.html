@@ -98,16 +98,18 @@
       </p>
       <p>Il caso di studio presentato si concentra sull'analisi di due dataset: <b>ACCOUNTS</b> e <b>DEALS</b>, contenenti informazioni su aziende e transazioni commerciali rispettivamente. L'obiettivo principale è identificare e affrontare criticità nei dati per fornire insight utili al business, come la classificazione delle aziende in base alle loro dimensioni e l'analisi delle opportunità di vendita.
       </p>
+      <p>
+      <a href="https://colab.research.google.com/drive/1YogSpSRc7rhh3hxI1MziICWCsUwkleHp?usp=sharing">GOOGLE COLAB NOTEBOOK</a>
+    </p>
       </div>
       <div class="container">
         <h2>Numero Conti per Fase</h2>
         <div id="plotly-div-1">
           <iframe src="./num_conti_fase.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Attualmente il portafoglio dei clienti è composto da un totale di 1048 accordi con base nei file utilizzati per l'analisi. Nel processo di pulizia sono state tolti 
-            6 risultati che erano classificati come "Closed Won" però presentavano un importo di €0.
+          <p>Attualmente il portafoglio dei clienti è composto da un totale di 1048 accordi con base nei file utilizzati per l'analisi. Nel processo di pulizia sono stati tolti 6 risultati che erano classificati come "Closed Won" che però presentavano un importo di €0.
           </p>
-          <p>Gli accordi con la classifica "Closed Won" costituiscono la maggior parte nel portafoglio, ma ancora meno della metà. Subito dopo ci sono i casi persi, componendo 33% del portafoglio presente nei file utilizzati per l'analisi.</p>
+          <p>Gli accordi con la classificazione "Closed Won" costituiscono la maggior parte del portafogli e sono meno del 50%.  Subito dopo ci sono i casi persi, che rappresentano il 33% dei dati utilizzati per l'analisi.</p>
       </div>
       <p class="lead-table">
         <table  data-aos="fade-up" data-aos-delay="300">
@@ -149,7 +151,7 @@
         <div id="plotly-div-2">
           <iframe src="./media_fase.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>In questo secondo grafico è possibile controllare la media di importo per ogni fase di tratativa. "Demo" presenta la media più alta e "Closed Lost" è quello con la media più alta.
+          <p>In questo secondo grafico è possibile controllare la media di importo per ogni fase di trattativa. "Demo" rapresenta la media più alta e "Closed Lost" è quello con la media più bassa.
           </p>
       </div>
     </section>
@@ -158,8 +160,7 @@
         <div id="plotly-div-3">
           <iframe src="./media_importo_settore.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Nel grafico "Importo Medio per Settore" sono in evidenza le aziende più presente nel portafoglio. Attività Manufatturiere è al primo posto e subito dopo abbiamo la grande presenza
-            dei dati sconosciuti, che evidenzia il impatto dei dati inconsistenti in questa analisi.
+          <p>Nel grafico "Importo Medio per Settore" sono in evidenza le aziende più presenti nel portafoglio. Attività Manufatturiere è al primo posto e subito dopo abbiamo i dati sconosciuti, questo evidenzia il impatto dei dati inconsistenti in questa analisi.
           </p>
       </div>
     </section>
@@ -168,9 +169,9 @@
         <div id="plotly-div-4">
           <iframe src="./dimensione_aziendale.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>La classificazione di dimensione aziendale segue il regolamento europeo presente nella tabella sotto.
+          <p>La classificazione di dimensione aziendale è stata creata rispettando il regolamento europeo vigente.
           </p>
-          <p>La maggior parte dei clienti che compongono il portafoglio sono classificati come piccole aziende e subito dopo ci sono le grande aziende.
+          <p>La maggior parte dei clienti che compongono il portafoglio sono classificati come piccole aziende. Subito dopo ci sono le grande aziende.
           </p>
       </div>
     </section>
@@ -179,7 +180,7 @@
         <div id="plotly-div-5">
           <iframe src="./distribuzione_percentuale_settore.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Questo grafico mostra solo i primi 5 settori più frequenti nel portafoglio e quanto rappresentano in percentuale. Ancora una volta, dati sconosciuti sono presenti nel dataset subito dopo l'attività manifatturiera che rappresenta il 18 percento del portafoglio. Altri quattro settori importanti sono COMMERCIO ALL'INGROSSO E AL DETTAGLIO; RIPARAZIONE DI AUTOVEICOLI E MOTOCICLI, SERVIZI DI INFORMAZIONE E COMUNICAZIONE, ATTIVITÀ PROFESSIONALI, SCIENTIFICHE E TECNICHE E NOLEGGIO, AGENZIE DI VIAGGIO, SERVIZI DI SUPPORTO ALLE IMPRESE
+          <p>Questo grafico mostra solo i primi 5 settori più frequenti nel portafoglio e quanto rappresentano in percentuale. Ancora una volta i dati sconosciuti sono presenti nel dataset subito dopo l'attività manifatturiera che rappresenta il 18 percento del portafoglio. Altri quattro settori importanti sono COMMERCIO ALL'INGROSSO E AL DETTAGLIO; RIPARAZIONE DI AUTOVEICOLI E MOTOCICLI, SERVIZI DI INFORMAZIONE E COMUNICAZIONE, ATTIVITÀ PROFESSIONALI, SCIENTIFICHE E TECNICHE E NOLEGGIO, AGENZIE DI VIAGGIO, SERVIZI DI SUPPORTO ALLE IMPRESE.
           </p>
       </div>
     </section>
@@ -188,8 +189,7 @@
         <div id="plotly-div-6">
           <iframe src="./closed_won_importo.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Per ragioni di dati inconsistenti, nella analisi temporale è stata utilizata solo la "Data Chiusura" in cui si intendi le date che gli accordi sono state chiusi o devono chiudere. 
-            Il grafico presenta la somma degli accordi con la classificazione di "Closed Won" durante tutto l'ano di 2024.
+          <p>A causa dell'inconsistenza dei dati è stata utilizata solo la "Data Chiusura" nella analisi temporale. Con "Data Chiusura" s'intende le date in cui gli accordi sono stati chiusi o devono chiudere. Il grafico presenta la somma degli accordi con la classificazione di "Closed Won" durante tutto l'anno di 2024.
           </p>
       </div>
     </section>
@@ -198,7 +198,7 @@
         <div id="plotly-div-7">
           <iframe src="./closed_lost_importo.html" height="600" width="1200" frameborder="0">
           </iframe>
-          <p>Il grafico presenta la somma degli accordi con la classificazione di "Closed Lost" durante tutto l'ano di 2024.
+          <p>Il grafico presenta la somma degli accordi con la classificazione di "Closed Lost" durante tutto l'anno di 2024.
           </p>
       </div>
     </section>
@@ -206,7 +206,7 @@
     <h2>Numero di Aziende nel Settore per Fase</h2>
     <div id="plotly-div-8">
     <div class='tableauPlaceholder' id='viz1733215673420' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_settore_fase_finale&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='count_settore_fase_finale&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;count_settore_fase_finale&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733215673420');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    <p>Il grafico presenta la somma delle aziende existenti nel portafoglio e con il filtro è possibile verificare quanti aziende ci sono in ogni fase della tratativa.
+    <p>Il grafico presenta la somma delle aziende esistenti nel portafoglio. Con il filtro è possibile verificare quante aziende ci sono in ogni fase della trattativa.
     </p>
   </section></div>
     <!--<div class="row align-items-center justify-content-between">
